@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes-Taking WebApp</title>
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+    <nav>
+        <a>Notes Taking WebApp</a>
+        
+        <input id="searchbar" type="text" class="searchbar" placeholder="Search Notes" > 
+        <button  class="search" onclick="searchbtn()">Search</button> 
+
+    </nav>
+        
+    <!-- Trigger/Open The Modal -->
+    <button id="add" class="add">＋Add Note</button>
+    
+
+    <div id="container" class="container">
+    
+    </div>
+
+    
+<!-- The Modal -->
+<div id="addModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="addmodal-content">
+        <xyz><abc>Add New Note</abc><span class="close">&times;</span></xyz>
+    <form >
+        <input id="noteTitle" type="text" class="noteTitle" placeholder="Enter title">
+        <textarea id="noteText" rows="6" class="noteText" placeholder="Enter note"></textarea>
+        <newbtn onclick="AddNote()">Save</newbtn>
+    </form>
+  </div>
+</div>
+<!-- The Modal -->
+<div id="editModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="addmodal-content">
+          <xyz><abc>Edit Note</abc><span class="close" style="margin-left: 69%;">&times;</span></xyz>
+      <form >
+          <input id="noteTitle2" type="text" class="noteTitle" placeholder="Enter title">
+          <textarea id="noteText2" rows="6" class="noteText" placeholder="Enter note"></textarea>
+          <newbtn onclick="editNote()">Update</newbtn>
+      </form>
+    </div>
+  </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
